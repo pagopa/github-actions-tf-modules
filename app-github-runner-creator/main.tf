@@ -27,3 +27,12 @@ resource "azurerm_role_assignment" "environment_runner_github_runner_rg" {
   role_definition_name = "Contributor"
   principal_id         = azuread_service_principal.github_app.object_id
 }
+
+#
+# Associate custom role
+#
+resource "azurerm_role_assignment" "pagopa_iac_reader" {
+  scope                = var.subscription_id
+  role_definition_name = "PagoPA IaC Reader"
+  principal_id         = azuread_service_principal.github_app.object_id
+}

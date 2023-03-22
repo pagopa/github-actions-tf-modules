@@ -1,14 +1,5 @@
 locals {
-  # github_app_roles = {
-  #   subscription = [
-  #     "Contributor",
-  #     "Storage Account Contributor",
-  #     "Storage Blob Data Contributor",
-  #     "Storage File Data SMB Share Contributor",
-  #     "Storage Queue Data Contributor",
-  #     "Storage Table Data Contributor",
-  #   ]
-  # }
+
 }
 
 variable "app_name" {
@@ -25,11 +16,6 @@ variable "github_repository" {
   type        = string
   description = "GitHub Repository"
 }
-
-# variable "iac_aad_group_name" {
-#   type        = string
-#   description = "Azure AD group name for iac sp apps (with Directory Reader permissions at leats)"
-# }
 
 variable "subscription_id" {
   type        = string
